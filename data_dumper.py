@@ -45,9 +45,10 @@ class FrameData:
                 hand_dict['direction'] = direction
 
                 # Calculate the hand's pitch, roll, and yaw angles
-                hand_dict['pitch'] = direction.pitch * Leap.RAD_TO_DEG
-                hand_dict['roll'] = normal.roll * Leap.RAD_TO_DEG
-                hand_dict['yaw'] = direction.yaw * Leap.RAD_TO_DEG
+                hand_dict['hand_angle'] = {}
+                hand_dict['hand_angle']['pitch'] = direction.pitch * Leap.RAD_TO_DEG
+                hand_dict['hand_angle']['roll'] = normal.roll * Leap.RAD_TO_DEG
+                hand_dict['hand_angle']['yaw'] = direction.yaw * Leap.RAD_TO_DEG
 
                 frame_dict['hands'].append(hand_dict)
 
