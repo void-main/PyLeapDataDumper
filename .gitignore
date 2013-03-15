@@ -1,1 +1,5 @@
+# ignore python compiled file
 *.pyc
+
+# ignore data file
+data-*.json
